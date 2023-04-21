@@ -3,10 +3,10 @@
 <template>
   <div id="app">
     <header>
-      <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+      <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" @click="open" />
 
-      <div class="wrapper">
-
+      <div  @click="close">
+aaa
       </div>
     </header>
 
@@ -16,7 +16,20 @@
   </div>
 </template>
 
+<script setup>
 
+function open(){
+
+ $zoho.salesiq.chat.start()
+}
+
+
+function close(){   
+  $zoho.salesiq.reset();
+
+}
+
+</script>
 
 
 <style scoped>
